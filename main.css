@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+:root{
+    --bg-color:rgb(0, 0, 25);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color);
+}
+
+.toggle-container{
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background: white;
+    border-radius: 20px;
+}
+
+.toggle{
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 10px solid rgb(255, 255, 0);
+    padding: 30px 0;
+    border-radius: 10px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 0);
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    padding: 0 10px;
+}
+
+.center h1 {
+    font-size: 40px;
+}
+
+.center p {
+    font-size: 25px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user,
+.computer,
+.result-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-choice,
+.computer-choice,.result {
+    color: red;
+    font-size: 20px;
+}
+
+.user i,
+.computer i, .result-container i {
+    color: white;
+    font-size: 20px;
+}
+
+.user h3,
+.computer h3, .result-container h3 {
+    color: white;
+    font-size: 20px;
+}
+
+.choices-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.choices {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 0);
+    border: 2px solid rgb(255, 255, 0);
+    border-radius: 25px;
+    transition: background .3s;
+}
+
+.choices:hover {
+    background: white;
+    border: 2px solid rgb(0, 0, 25);
+    color: rgb(0, 0, 25);
+    font-weight: bold;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
